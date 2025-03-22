@@ -1,0 +1,58 @@
+/* Sidebar Default Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #043873; /* Adjust to match your theme */
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 0;
+    padding: 0;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #0a4275;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Adjust based on sidebar width */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Adjust Main Content When Sidebar is Collapsed */
+.sidebar.collapsed ~ .main-content {
+    margin-left: 0;
+}
+
+/* Toggle Button */
+.menu-toggle {
+    position: absolute;
+    top: 15px;
+    left: 260px; /* Slightly outside sidebar */
+    font-size: 24px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+/* Adjust Toggle Button When Sidebar is Collapsed */
+.sidebar.collapsed + .menu-toggle {
+    left: 10px;
+}

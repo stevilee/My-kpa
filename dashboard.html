@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY KPA Dashboard</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+<script src="script.js" defer></script>
+    <!-- Menu Button for Mobile -->
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>MY KPA PORTAL</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                Welcome to MY KPA Dashboard
+            </header>
+
+            <h2>Welcome, [Role Name]</h2>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h2>100 Active Users</h2>
+                </div>
+                <div class="card">
+                    <h2>50 New Reports</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>

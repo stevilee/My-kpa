@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+.kpa-header {
+    background-color: #003f87; /* KPA deep blue */
+    color: white;
+    padding: 10px 0;
+}
+
+/* Logo Container */
+.logo-container {
+    background-color: white;
+    padding: 15px 0;
+}
+
+/* Logo Styling */
+.kpa-logo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+nav {
+    background: #003f87;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px 20px;
+    background: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #003d80;
+}
+
+/* Footer Styling */
+footer {
+    background: #003f87;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+.kpa-header {
+    text-align: center;
+    background-color: #003f87; /* KPA deep blue */
+    color: white;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+    background-color: white; /* White background for the logo */
+    padding: 10px 0; /* Space around the logo */
+}
+
+/* Logo Styling */
+.kpa-logo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Title Styling */
+.kpa-header h1 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Login Container */
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields & Dropdown */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Login Button */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #003d80;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color: #003f87;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
