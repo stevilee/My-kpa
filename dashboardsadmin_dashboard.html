@@ -1,13 +1,141 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role, Division, and Department Selector</title>
+    <style>
+        /* Style for the modal */
+        #divisionModal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Style for the department selection section */
+        #departmentSelect {
+            display: none;
+        }
+
+        /* Basic styling for form elements */
+        label, select {
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+    <h1>Role, Division, and Department Selector</h1>
+
+    <!-- Role Selection -->
+    <div>
+        <label for="role">Select Role:</label>
+        <select id="role" name="role">
+            <option value="">-- Select Role --</option>
+            <option value="manager">Manager</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+        </select>
+    </div>
+
+    <!-- Division Modal -->
+    <div id="divisionModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Select Division</h2>
+            <select id="division" name="division">
+                <option value="">-- Select Division --</option>
+                <option value="hr">Human Resources</option>
+                <option value="sales">Sales</option>
+                <option value="it">IT</option>
+            </select>
+            <button onclick="showDepartmentSelect()">Next</button>
+        </div>
+    </div>
+
+    <!-- Department Selection -->
+    <div id="departmentSelect">
+        <label for="department">Select Department:</label>
+        <select id="department" name="department">
+            <!-- Options will be dynamically populated based on selected division -->
+        </select>
+    </div>
+
+    <script>
+        // Function to show the division selection modal
+        function showDivisionModal() {
+            const role = document.getElementById('role').value;
+            if (role) {
+                document.getElementById('divisionModal').style.display = 'block';
+            }
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('divisionModal').style.display = 'none';
+        }
+
+        // Function to show department selection after division is chosen
+        function showDepartmentSelect() {
+            const division = document.getElementById('division').value;
+
+            let departmentOptions = [];
+            if (division === 'hr') {
+                departmentOptions = ['Recruitment', 'Employee Relations'];
+            } else if (division === 'sales') {
+                departmentOptions = ['Regional Sales', 'Global Sales'];
+            } else if (division === 'it') {
+                departmentOptions = ['Development', 'Support'];
+            }
+
+            // Populate department dropdown
+            const departmentDropdown = document.getElementById('department');
+            departmentDropdown.innerHTML = ''; // Clear existing options
+            departmentOptions.forEach(function(department) {
+                const option = document.createElement('option');
+                option.value = department.toLowerCase().replace(/\s+/g, '_');
+                option.text = department;
+                departmentDropdown.appendChild(option);
+            });
+
+            // Show the department select
+            document.getElementById('departmentSelect').style.display = 'block';
+            closeModal(); // Close the division modal
+        }
+
+        // Listen for role selection to show the division modal
+        document.getElementById('role').addEventListener('change', showDivisionModal);
+    </script>
 </body>
 </html>
+
